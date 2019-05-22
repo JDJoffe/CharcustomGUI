@@ -695,6 +695,90 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &97744702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97744704}
+  - component: {fileID: 97744703}
+  m_Layer: 0
+  m_Name: custom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &97744703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97744702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edd9a78a8e380742b9c50a1f93fbc2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: []
+  hair: []
+  mouth: []
+  eyes: []
+  armour: []
+  clothes: []
+  skinIndex: 0
+  hairIndex: 0
+  mouthIndex: 0
+  eyesIndex: 0
+  armourIndex: 0
+  clothesIndex: 0
+  character: {fileID: 0}
+  skinMax: 4
+  hairMax: 5
+  mouthMax: 3
+  eyesMax: 4
+  armourMax: 11
+  clothesMax: 11
+  charName: Bartholemew Shimpenson
+  characterClass: 0
+  statArray:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  stats: 000000000000000000000000000000000000000000000000
+  statsTemp: 000000000000000000000000000000000000000000000000
+  points: 10
+  selectedClass:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  selectedIndex: 0
+--- !u!4 &97744704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97744702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5610626, y: -3.612907, z: -7.5576353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100072160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1139051276547156, guid: 26430f558fb6ee34cb19d86ce9e2953a,
@@ -3468,7 +3552,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947070533}
   m_CullTransparentMesh: 0
---- !u!1001 &1055145644
+--- !u!1001 &1062252856
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3477,19 +3561,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1487054404768522, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_Name
-      value: Warrior
+      value: Warrior (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 0.7810771
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -3.931748
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.462392
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3497,7 +3581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.93636626
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3505,23 +3589,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.35102466
       objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
@@ -4130,12 +4202,40 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245563652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86b37a6b7b0ea6440a59ac97e9f6c399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quests: []
+--- !u!114 &1245563663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245563652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85670f027cb3ce648be86a1102eb9bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scr: {x: 0, y: 0}
+  scrollPos: {x: 0, y: 0}
+  sortType:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  index: 0
+  sortingType: All
+  dropLocation: {fileID: 0}
+  equippedLocation: []
+  curWeapon: {fileID: 0}
+  curHelm: {fileID: 0}
 --- !u!1001 &1283618248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4256,11 +4356,21 @@ PrefabInstance:
       propertyPath: healthFill
       value: 
       objectReference: {fileID: 78133149}
+    - target: {fileID: 114925039137325490, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114662104012448784, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
         type: 3}
       propertyPath: curCheckPoint
       value: 
       objectReference: {fileID: 543307257}
+    - target: {fileID: 114662104012448784, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54678763892033478, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473, type: 3}
     - {fileID: 54786893679334636, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473, type: 3}
@@ -4815,7 +4925,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1297402999}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245563652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c04b50b0f69a640baa30a92245efd1, type: 3}
   m_Name: 

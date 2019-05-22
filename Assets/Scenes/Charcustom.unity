@@ -328,7 +328,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032359128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2edd9a78a8e380742b9c50a1f93fbc2e, type: 3}
   m_Name: 
@@ -388,3 +388,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2035435403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1487054404768522, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1702742385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2035435406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035435403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85670f027cb3ce648be86a1102eb9bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scr: {x: 0, y: 0}
+  scrollPos: {x: 0, y: 0}
+  sortType:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  index: 0
+  sortingType: All
+  dropLocation: {fileID: 0}
+  equippedLocation: []
+  curWeapon: {fileID: 0}
+  curHelm: {fileID: 0}
