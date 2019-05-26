@@ -48,12 +48,9 @@ public class CustomisationSet : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
         statArray = new string[] { "Strength", "Dex builds yuck", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Borborigan", "Bord", "Cloric", "Drooid", "Foightah", "Moonk", "Poloodoin", "Ronger", "Roogeg", "Soresore_ah", "woolak", "Bizard", };
-
         //in start we need to set up the following
-
         #region for loop to pull textures from file
         //for loop looping from 0 to less than the max amount of skin textures we need
         for (int i = 0; i < skinMax; i++)
@@ -63,7 +60,6 @@ public class CustomisationSet : MonoBehaviour
             //add our temp texture that we just found to the skin List
             skin.Add(temp);
         }
-
         for (int i = 0; i < eyesMax; i++)
         {
             //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for eyes_#
@@ -71,7 +67,6 @@ public class CustomisationSet : MonoBehaviour
             //add our temp texture that we just found to the eyes List
             eyes.Add(temp);
         }
-
         for (int i = 0; i < mouthMax; i++)
         {
             //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for mouth_#
@@ -79,7 +74,6 @@ public class CustomisationSet : MonoBehaviour
             //add our temp texture that we just found to the mouth List
             mouth.Add(temp);
         }
-
         for (int i = 0; i < hairMax; i++)
         {
             //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for hair_#
@@ -87,7 +81,6 @@ public class CustomisationSet : MonoBehaviour
             //add our temp texture that we just found to the hair List
             hair.Add(temp);
         }
-
         for (int i = 0; i < armourMax; i++)
         {
             //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for armour_#
@@ -95,7 +88,6 @@ public class CustomisationSet : MonoBehaviour
             //add our temp texture that we just found to the armour List
             armour.Add(temp);
         }
-
         for (int i = 0; i < clothesMax; i++)
         {
             //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for clothes_#
@@ -103,6 +95,8 @@ public class CustomisationSet : MonoBehaviour
             //add our temp texture that we just found to the clothes List
             clothes.Add(temp);
         }
+        #endregion
+
         character = GameObject.Find("Mesh").GetComponent<SkinnedMeshRenderer>();
         SetTexture("skin",skinIndex= 0 );
         SetTexture("eyes", eyesIndex= 0);
@@ -110,12 +104,14 @@ public class CustomisationSet : MonoBehaviour
         SetTexture("hair",hairIndex= 0);
         SetTexture("armour",armourIndex= 0);
         SetTexture("clothes",clothesIndex= 0);
-        #endregion
+
         //connect and find the SkinnedMeshRenderer thats in the scene to the variable we made for Renderer
         #region do this after making the function SetTexture
         //SetTexture skin, hair, mouth, eyes to the first texture 0
         #endregion
+        ChooseClass(selectedIndex);
         #endregion
+        
     }
     #region SetTexture
     //Create a function that is called SetTexture it should contain a string and int
@@ -278,14 +274,14 @@ public class CustomisationSet : MonoBehaviour
     {
         //create the floats scrW and scrH that govern our 16:9 ratio
         float scrW = Screen.width / 16;
-            float scrH = Screen.height / 9;
+        float scrH = Screen.height / 9;
 
         #region SetTextureGUI
         //create an int that will help with shuffling your GUI elements under eachother
         int i = 0;
-        if (GUI.Button(new Rect(0.25f*scrW,scrH+i*(0.5f*scrH),0.5f*scrW,0.5f*scrH),"<"))
+        if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
         {
-            SetTexture("skin",-1);
+            SetTexture("skin", -1);
         }
 
         GUI.Box(new Rect(0.75f * scrW, scrH + i * (0.5f * scrH), 1f * scrW, 0.5f * scrH), "skin");
@@ -296,7 +292,7 @@ public class CustomisationSet : MonoBehaviour
         }
         i++;
 
-       
+
         if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
         {
             SetTexture("eyes", -1);
@@ -310,7 +306,7 @@ public class CustomisationSet : MonoBehaviour
         }
         i++;
 
-      
+
         if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
         {
             SetTexture("mouth", -1);
@@ -324,7 +320,7 @@ public class CustomisationSet : MonoBehaviour
         }
         i++;
 
-       
+
         if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
         {
             SetTexture("hair", -1);
@@ -338,7 +334,7 @@ public class CustomisationSet : MonoBehaviour
         }
         i++;
 
-       
+
         if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
         {
             SetTexture("armour", -1);
@@ -352,7 +348,7 @@ public class CustomisationSet : MonoBehaviour
         }
         i++;
 
-        
+
         if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
         {
             SetTexture("clothes", -1);
@@ -383,32 +379,194 @@ public class CustomisationSet : MonoBehaviour
 
         if (GUI.Button(new Rect(1.25f * scrW, scrH + i * (0.5f * scrH), scrW, 0.5f * scrH), "Random"))
         {
-          
-            SetTexture("skin", Random.Range(0,skinMax - 1));
+
+            SetTexture("skin", Random.Range(0, skinMax - 1));
             SetTexture("eyes", Random.Range(0, eyesMax - 1));
             SetTexture("mouth", Random.Range(0, mouthMax - 1));
             SetTexture("hair", Random.Range(0, hairMax - 1));
             SetTexture("armour", Random.Range(0, armourMax - 1));
             SetTexture("clothes", Random.Range(0, clothesMax - 1));
         }
+        i++;
+        charName = GUI.TextField(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), charName, 20);
+        i++;
+        if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), "Save and play"))
+        {
+            Save();
+            SceneManager.LoadScene(2);
+        }
+        i = 0;
+
+        GUI.Box(new Rect(3.75f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), "Class");
+        i++;
+       
+
+        if (GUI.Button(new Rect(3.25f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "<"))
+        {
+            selectedIndex--;
+            if (selectedIndex < 0)
+            {
+                selectedIndex = selectedClass.Length - 1;
+            }
+            ChooseClass(selectedIndex);
+        }
+
+        GUI.Box(new Rect(3.75f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), selectedClass[selectedIndex]);
+
+        if (GUI.Button(new Rect(5.75f * scrW, scrH + i * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), ">"))
+        {
+            selectedIndex++;
+            if (selectedIndex > selectedClass.Length - 1)
+            {
+                selectedIndex = 0;
+            }
+            ChooseClass(selectedIndex);
+        }
+        GUI.Box(new Rect(3.75f * scrW, 2f * scrH, 2f* scrW, 0.5f * scrH), "Points:" + points);
+        for (int s = 0; s < 6; s++)
+        {
+            if (points > 0)
+            {
+                if (GUI.Button(new Rect(5.75f * scrW, 2.5f * scrH + s * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH),"+"))
+                {
+                    points--;
+                    statsTemp[s]++;
+                    
+                }
+            }
+            GUI.Box(new Rect(3.75f * scrW, 2.5f * scrH+s*(0.5f *scrH), 2f * scrW, 0.5f * scrH), statArray[s]+": "+(statsTemp[s] + stats[s]));
+            if (points < 10 && statsTemp[s] > 0)
+            {
+                if (GUI.Button(new Rect(3.25f * scrW, 2.5f * scrH + s * (0.5f * scrH), 0.5f * scrW, 0.5f * scrH), "-"))
+                {
+                    points++;
+                    statsTemp[s]--;
+
+                }
+            }
+        }
     }
     #endregion
 
     //move down the screen with the int using ++ each grouping of GUI elements are moved using this
+
     #endregion
     void ChooseClass(int className)
     {
         switch(className)
         {
+            /// <summary>
+            /// remember to change stats of each class 
+            /// </summary>
             case 0:
-                stats[0] = 15;
+                stats[0] = 15; //strength
+                stats[1] = 10; //ew dex
+                stats[2] = 10; // constitution
+                stats[3] = 10; // wisdom
+                stats[4] = 10; //intelligence
+                stats[5] = 5; //charisma
+                characterClass = CharacterClass.Borborigan;
+                break;
+            case 1:
+                stats[0] = 10;
+                stats[1] = 10; 
+                stats[2] = 10; 
+                stats[3] = 10; 
+                stats[4] = 10; 
+                stats[5] = 5;
+                characterClass = CharacterClass.Bord;
+                break;
+            case 2:
+                stats[0] = 10;
                 stats[1] = 10;
                 stats[2] = 10;
                 stats[3] = 10;
                 stats[4] = 10;
                 stats[5] = 5;
-                characterClass = CharacterClass.Borborigan;
+                characterClass = CharacterClass.Cloric;
                 break;
+            case 3:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Drooid;
+                break;
+            case 4:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Foightah;
+                break;
+            case 5:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Moonk;
+                break;
+            case 6:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Poloodoin;
+                break;
+            case 7:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Ronger;
+                break;
+            case 8:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Roogeg;
+                break;
+            case 9:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Soresore_ah;
+                break;
+            case 10:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.woolak;
+                break;
+            case 11:
+                stats[0] = 10;
+                stats[1] = 10;
+                stats[2] = 10;
+                stats[3] = 10;
+                stats[4] = 10;
+                stats[5] = 5;
+                characterClass = CharacterClass.Bizard;
+                break;
+           
         }
     }
     #region Character Name and Save & Play
