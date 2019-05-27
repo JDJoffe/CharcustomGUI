@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Healthbar
-{
+
     public class HealthBar : MonoBehaviour
     {
        
         //max player health
         public float maxHealth;
         // player current health
-        public float currentHealth;
+        public float curHealth;
     
         [Header("Reference to UI slider")]
         //reference to slider
@@ -25,16 +24,16 @@ namespace Healthbar
         void Update()
         {
             //currenthealth divided by maxhealth to make it 0
-            healthSlider.value = Mathf.Clamp01(currentHealth / maxHealth);
+            healthSlider.value = Mathf.Clamp01(curHealth / maxHealth);
 
             //you dead
-            if (currentHealth <= 0 && healthFill.enabled)
+            if (curHealth <= 0 && healthFill.enabled)
             {
                 //dead = no filled bar
                 healthFill.enabled = false;
                 Debug.Log("you dead");
             }
-            if (!healthFill.enabled && currentHealth > 0)
+            if (!healthFill.enabled && curHealth > 0)
             {
                 //if alive you bar is there
                 healthFill.enabled = enabled;
@@ -44,4 +43,3 @@ namespace Healthbar
             
         }
     }
-}

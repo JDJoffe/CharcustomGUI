@@ -285,7 +285,7 @@ public static class ItemData
             Description = description,
             ID = itemID,
             Value = value,
-            Icon = Resources.Load("Prefabs/" + icon) as Texture2D,
+            Icon = Resources.Load("Icons/" + icon) as Texture2D,
             Mesh = Resources.Load("Prefabs/" + mesh) as GameObject,
             Heal = heal,
             Damage = damage,

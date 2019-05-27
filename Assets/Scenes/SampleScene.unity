@@ -695,90 +695,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &97744702
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 97744704}
-  - component: {fileID: 97744703}
-  m_Layer: 0
-  m_Name: custom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &97744703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97744702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2edd9a78a8e380742b9c50a1f93fbc2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skin: []
-  hair: []
-  mouth: []
-  eyes: []
-  armour: []
-  clothes: []
-  skinIndex: 0
-  hairIndex: 0
-  mouthIndex: 0
-  eyesIndex: 0
-  armourIndex: 0
-  clothesIndex: 0
-  character: {fileID: 0}
-  skinMax: 4
-  hairMax: 5
-  mouthMax: 3
-  eyesMax: 4
-  armourMax: 11
-  clothesMax: 11
-  charName: Bartholemew Shimpenson
-  characterClass: 0
-  statArray:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  stats: 000000000000000000000000000000000000000000000000
-  statsTemp: 000000000000000000000000000000000000000000000000
-  points: 10
-  selectedClass:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  selectedIndex: 0
---- !u!4 &97744704
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97744702}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5610626, y: -3.612907, z: -7.5576353}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100072160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1139051276547156, guid: 26430f558fb6ee34cb19d86ce9e2953a,
@@ -1093,6 +1009,112 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59fa2d6b5b2960f4096884e5be8d3d85, type: 3}
+--- !u!1001 &233096890
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7810771
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.931748
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.462392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.93636626
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.35102466
+      objectReference: {fileID: 0}
+    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+--- !u!1 &233096891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1487054404768522, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 233096890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &233096892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4224328830174568, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 233096890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &233096893 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4100485868450906, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 233096890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &233096894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233096891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c04b50b0f69a640baa30a92245efd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  curHealth: 0
+  healthSlider: {fileID: 0}
+  healthFill: {fileID: 0}
+--- !u!114 &233096895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233096891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85670f027cb3ce648be86a1102eb9bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 233096894}
+  scr: {x: 0, y: 0}
+  scrollPos: {x: 0, y: 0}
+  sortType:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  index: 0
+  sortingType: All
+  dropLocation: {fileID: 233096893}
+  equippedLocation:
+  - {fileID: 233096892}
+  - {fileID: 233096893}
+  curWeapon: {fileID: 0}
+  curHelm: {fileID: 0}
 --- !u!1 &260696962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1422,90 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &305186726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305186728}
+  - component: {fileID: 305186727}
+  m_Layer: 0
+  m_Name: custom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &305186727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305186726}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edd9a78a8e380742b9c50a1f93fbc2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: []
+  hair: []
+  mouth: []
+  eyes: []
+  armour: []
+  clothes: []
+  skinIndex: 0
+  hairIndex: 0
+  mouthIndex: 0
+  eyesIndex: 0
+  armourIndex: 0
+  clothesIndex: 0
+  character: {fileID: 0}
+  skinMax: 4
+  hairMax: 5
+  mouthMax: 3
+  eyesMax: 4
+  armourMax: 11
+  clothesMax: 11
+  charName: Bartholemew Jojo Simpson
+  characterClass: 0
+  statArray:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  stats: 000000000000000000000000000000000000000000000000
+  statsTemp: 000000000000000000000000000000000000000000000000
+  points: 10
+  selectedClass:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  selectedIndex: 0
+--- !u!4 &305186728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305186726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5610626, y: -3.612907, z: -7.5576353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319622226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f0df03decff0bac47bb6f666177fdd57,
@@ -3552,51 +3658,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947070533}
   m_CullTransparentMesh: 0
---- !u!1001 &1062252856
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1487054404768522, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_Name
-      value: Warrior (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.7810771
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.931748
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7.462392
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.93636626
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.35102466
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
 --- !u!1 &1081682902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c30bc7c147c046b4fbe28b65ba58b16e,
@@ -4220,6 +4281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85670f027cb3ce648be86a1102eb9bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   scr: {x: 0, y: 0}
   scrollPos: {x: 0, y: 0}
   sortType:
@@ -4314,6 +4376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 1846220195378096, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4833962485519184, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4359,7 +4425,7 @@ PrefabInstance:
     - target: {fileID: 114925039137325490, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114662104012448784, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
         type: 3}
@@ -4370,6 +4436,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114131082154471852, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114069845875504368, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54678763892033478, guid: 7cb7ce7ffc4f6fc4ab54bf42ce2bc473, type: 3}
@@ -4925,7 +5001,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1297402999}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245563652}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c04b50b0f69a640baa30a92245efd1, type: 3}
   m_Name: 

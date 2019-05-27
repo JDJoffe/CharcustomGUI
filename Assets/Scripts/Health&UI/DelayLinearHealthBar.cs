@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Healthbar
-{
 
     public class DelayLinearHealthBar : MonoBehaviour
     {
@@ -61,4 +59,4 @@ namespace Healthbar
            
         }
     }
-}
+

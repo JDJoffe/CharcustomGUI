@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Healthbar;
+
 using System.Collections;
 //this script can be found in the Component section under the option Intro RPG/Player/Check Point 
 [AddComponentMenu("Intro PRG/RPG/Player/Check Point")]
@@ -29,12 +29,12 @@ public class CheckPoint : MonoBehaviour
     private void Update()
     {
         //if our characters health is less than or equal to 0
-        if (health.currentHealth <= 0)
+        if (health.curHealth <= 0)
         {
             //our transform.position is equal to that of the checkpoint or float x,y,z
             transform.position = curCheckPoint.position;
             //our characters health is equal to full health
-            health.currentHealth = health.maxHealth;
+            health.curHealth = health.maxHealth;
             //character is alive
             //characters controller is active		
         }

@@ -31,7 +31,7 @@ public class CustomisationSet : MonoBehaviour
     public int hairMax, mouthMax, eyesMax, armourMax, clothesMax;
     [Header("Character Name")]
     //name of our character that the user is making
-    public string charName = "Bartholemew Shimpenson";
+    public string charName = "Bartholemew Jojo Simpson";
     [Header("Stats")]
     //class enum
     public CharacterClass characterClass;
@@ -388,7 +388,7 @@ public class CustomisationSet : MonoBehaviour
             SetTexture("clothes", Random.Range(0, clothesMax - 1));
         }
         i++;
-        charName = GUI.TextField(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), charName, 20);
+        charName = GUI.TextField(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), charName, 30);
         i++;
         if (GUI.Button(new Rect(0.25f * scrW, scrH + i * (0.5f * scrH), 2 * scrW, 0.5f * scrH), "Save and play"))
         {
