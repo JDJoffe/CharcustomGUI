@@ -736,6 +736,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1487054404768522, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1088,8 +1092,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: 1
-  sensitivityX: 0
-  sensitivityY: 0
+  sensitivityX: 10
+  sensitivityY: 10
   minY: -60
   maxY: 60
   RotationY: 0

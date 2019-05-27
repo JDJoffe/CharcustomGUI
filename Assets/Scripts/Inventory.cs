@@ -32,6 +32,7 @@ public class Inventory : MonoBehaviour
     #endregion
     void Start()
     {
+
         sortType = new string[] { "All", "Food", "Weapon", "Apparel", " Crafting", "Quest", "Money", " Ingredients", " Potions", " Scrolls" };
 
         inv.Add(ItemData.CreateItem(0));
@@ -51,6 +52,7 @@ public class Inventory : MonoBehaviour
     {
         if (showInv)
         {
+
             showInv = false;
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
@@ -274,6 +276,12 @@ public class Inventory : MonoBehaviour
                 }
                 break;
             case ItemType.Quest:
+                GUI.Box(new Rect(8 * scr.x, 5 * scr.y, 8 * scr.x, 3 * scr.y),
+               selectedItem.Name
+               + "\n" + selectedItem.Description
+               + "\nValue: " + selectedItem.Value
+               + "\nAmount: " + selectedItem.Amount
+                + "\n\nQuest Items Cannot Be Dropped.");
                 break;
             case ItemType.Ingredients:
                 GUI.Box(new Rect(8 * scr.x, 5 * scr.y, 8 * scr.x, 3 * scr.y),

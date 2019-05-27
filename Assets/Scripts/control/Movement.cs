@@ -28,6 +28,10 @@ public class Movement : MonoBehaviour
     //charc is on this game object we need to get the character controller that is attached to it
     void Start()
     {
+
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         canMove = true;
         _characterController = this.GetComponent<CharacterController>();
     }
