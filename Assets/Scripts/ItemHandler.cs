@@ -7,7 +7,7 @@ public class ItemHandler : MonoBehaviour
     public int idNum;
     public int amount;
     public ItemType type;
-    void OnCollection()
+  public  void OnCollection()
     {
         if (type == ItemType.Money)
         {
