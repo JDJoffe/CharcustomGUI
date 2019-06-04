@@ -45,7 +45,7 @@ public class Inventory : MonoBehaviour
         inv.Add(ItemData.CreateItem(502));
         inv.Add(ItemData.CreateItem(602));
         inv.Add(ItemData.CreateItem(701));
-        for (int i = 0; i < inv.Count; i++) { Debug.Log(inv[1].Name); }
+        for (int i = 0; i < inv.Count; i++) { Debug.Log(inv[i].Name); }
 
     }
     public bool ToggleInv()
@@ -174,8 +174,18 @@ public class Inventory : MonoBehaviour
     }
     void DisplayItem()
     {
+        //bug here when there is not a selected item.
+        //make a default i guess
+
+       
+        
         switch (selectedItem.Type)
         {
+            default:
+                Debug.Log("selected item set to default");
+              
+                break;
+
             case ItemType.Food:
                 GUI.Box(new Rect(8 * scr.x, 5 * scr.y, 8 * scr.x, 3 * scr.y),
                     selectedItem.Name
@@ -343,6 +353,7 @@ public class Inventory : MonoBehaviour
                     Discard();
                 }
                 break;
+           
         }
     }
     void DepleteAmount()
@@ -384,6 +395,10 @@ public class Inventory : MonoBehaviour
                 GUI.DrawTexture(new Rect(11 * scr.x, 1.5f * scr.y, 2 * scr.x, 2 * scr.y), selectedItem.Icon);
             }
             DisplayItem();
+            if (selectedItem == null)
+            {
+                Debug.Log("wahoo");
+            }
         }
     }
 }

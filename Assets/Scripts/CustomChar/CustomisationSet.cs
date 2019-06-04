@@ -468,21 +468,21 @@ public class CustomisationSet : MonoBehaviour
                 characterClass = CharacterClass.Borborigan;
                 break;
             case 1:
-                stats[0] = 10;
+                stats[0] = 5;
                 stats[1] = 10; 
-                stats[2] = 10; 
+                stats[2] = 5; 
                 stats[3] = 10; 
-                stats[4] = 10; 
-                stats[5] = 5;
+                stats[4] = 15; 
+                stats[5] = 15;
                 characterClass = CharacterClass.Bord;
                 break;
             case 2:
-                stats[0] = 10;
-                stats[1] = 10;
+                stats[0] = 5;
+                stats[1] = 5;
                 stats[2] = 10;
-                stats[3] = 10;
-                stats[4] = 10;
-                stats[5] = 5;
+                stats[3] = 15;
+                stats[4] = 15;
+                stats[5] = 10;
                 characterClass = CharacterClass.Cloric;
                 break;
             case 3:
@@ -505,10 +505,10 @@ public class CustomisationSet : MonoBehaviour
                 break;
             case 5:
                 stats[0] = 10;
-                stats[1] = 10;
+                stats[1] = 15;
                 stats[2] = 10;
-                stats[3] = 10;
-                stats[4] = 10;
+                stats[3] = 15;
+                stats[4] = 5;
                 stats[5] = 5;
                 characterClass = CharacterClass.Moonk;
                 break;
