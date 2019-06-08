@@ -470,9 +470,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 437657628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a37c541d742ef478aafbbdf2d73e18, type: 3}
+  m_Script: {fileID: 11500000, guid: c75a66e8ae03b094e91a7c9b70b17a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  axis: 2
+  sensitivityX: 5
+  sensitivityY: 5
+  minY: -60
+  maxY: 60
+  RotationY: 0
 --- !u!1 &513678230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.16999817, y: 0}
+  m_AnchoredPosition: {x: -0.16998291, y: 0}
   m_SizeDelta: {x: -10.34, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1292956105
@@ -1242,7 +1248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.16999817, y: 0}
+  m_AnchoredPosition: {x: -0.16998291, y: 0}
   m_SizeDelta: {x: -10.34, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1451002326
@@ -1527,7 +1533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.16999817, y: 0}
+  m_AnchoredPosition: {x: -0.16998291, y: 0}
   m_SizeDelta: {x: -10.34, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1702742385
@@ -1694,25 +1700,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2035435403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85670f027cb3ce648be86a1102eb9bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2035435407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035435403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c04b50b0f69a640baa30a92245efd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  curHealth: 100
+  maxHealth: 10
+  curHealth: 10
+  maxMana: 10
+  curMana: 10
+  maxStamina: 10
+  curStamina: 10
   healthSlider: {fileID: 951051599}
   healthFill: {fileID: 401700612}
+  manaSlider: {fileID: 513678232}
+  manaFill: {fileID: 1451002328}
+  staminaSlider: {fileID: 48407709}
+  staminaFill: {fileID: 1063475901}
 --- !u!143 &2035435408
 CharacterController:
   m_ObjectHideFlags: 0
