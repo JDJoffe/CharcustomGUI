@@ -1214,7 +1214,7 @@ MonoBehaviour:
   clothesIndex: 0
   character: {fileID: 0}
   skinMax: 4
-  hairMax: 3
+  hairMax: 5
   mouthMax: 3
   eyesMax: 4
   armourMax: 11
