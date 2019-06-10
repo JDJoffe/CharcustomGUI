@@ -110,11 +110,139 @@ public class ButtonsScript : MonoBehaviour
             clothes.Add(temp);
         }
     }
-
-    // Update is called once per frame
-    void Update()
+   
+    void SetTexture(string type, int dir)
     {
+        int index = 0, max = 0, matIndex = 0;
+        Texture2D[] textures = new Texture2D[0];
 
+        #region Switch Material
+        switch (type)
+        {
+            //case skin
+            case "skin":
+                //index is the same as our skin index
+                index = skinIndex;
+                //max is the same as our skin max
+                max = skinMax;
+                //textures is our skin list .ToArray()
+                textures = skin.ToArray();
+                //material index element number is 1
+                matIndex = 1;
+                break;
+
+            case "eyes":
+
+                index = eyesIndex;
+
+                max = eyesMax;
+
+
+                textures = eyes.ToArray();
+
+                matIndex = 2;
+                break;
+
+            case "mouth":
+
+                index = mouthIndex;
+
+                max = mouthMax;
+
+
+                textures = mouth.ToArray();
+
+                matIndex = 3;
+                break;
+
+            case "hair":
+
+                index = hairIndex;
+
+                max = hairMax;
+
+
+                textures = hair.ToArray();
+
+                matIndex = 4;
+                break;
+
+            case "armour":
+
+                index = armourIndex;
+
+                max = armourMax;
+
+
+                textures = armour.ToArray();
+
+                matIndex = 5;
+                break;
+
+            case "clothes":
+
+                index = clothesIndex;
+
+                max = clothesMax;
+
+
+                textures = clothes.ToArray();
+
+                matIndex = 6;
+                break;
+
+        }
+
+        #endregion
+        #region OutSide Switch
+        //index plus equals our direction
+        //cap our index to loop back around if is is below 0 or above max take one
+        //Material array is equal to our characters material list
+        //our material arrays current material index's main texture is equal to our texture arrays current index
+        //our characters materials are equal to the material array
+        //create another switch that is goverened by the same string name of our material
+        index += dir;
+
+
+        if (index < 0)
+        {
+            index = max - 1;
+        }
+        if (index > max - 1)
+        {
+            index = 0;
+        }
+        Material[] mat = character.materials;
+        mat[matIndex].mainTexture = textures[index];
+        character.materials = mat;
+
+        #endregion
+        #region Set Material Switch
+        //case skin
+        switch (type)
+        {
+            case "skin":
+                skinIndex = index;
+                break;
+            case "eyes":
+                eyesIndex = index;
+                break;
+            case "mouth":
+                mouthIndex = index;
+                break;
+            case "hair":
+                hairIndex = index;
+                break;
+            case "clothes":
+                clothesIndex = index;
+                break;
+            case "armour":
+                armourIndex = index;
+                break;
+
+        }
+
+        #endregion
     }
     public void Save()
     {
