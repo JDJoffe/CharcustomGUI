@@ -67,7 +67,48 @@ public class ButtonsScript : MonoBehaviour
         statArray = new string[] { "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Borborigan", "Bord", "Cloric", "Drooid", "Foightah", "Moonk", "Poloodoin", "Ronger", "Roogeg", "Soresore_ah", "woolak", "Bizard", };
 
-
+        for (int i = 0; i < skinMax; i++)
+        {
+            //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for Skin_#
+            Texture2D temp = Resources.Load("Character/Skin_" + i.ToString()) as Texture2D;
+            //add our temp texture that we just found to the skin List
+            skin.Add(temp);
+        }
+        for (int i = 0; i < eyesMax; i++)
+        {
+            //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for eyes_#
+            Texture2D temp = Resources.Load("Character/Eyes_" + i.ToString()) as Texture2D;
+            //add our temp texture that we just found to the eyes List
+            eyes.Add(temp);
+        }
+        for (int i = 0; i < mouthMax; i++)
+        {
+            //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for mouth_#
+            Texture2D temp = Resources.Load("Character/Mouth_" + i.ToString()) as Texture2D;
+            //add our temp texture that we just found to the mouth List
+            mouth.Add(temp);
+        }
+        for (int i = 0; i < hairMax; i++)
+        {
+            //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for hair_#
+            Texture2D temp = Resources.Load("Character/Hair_" + i.ToString()) as Texture2D;
+            //add our temp texture that we just found to the hair List
+            hair.Add(temp);
+        }
+        for (int i = 0; i < armourMax; i++)
+        {
+            //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for armour_#
+            Texture2D temp = Resources.Load("Character/Armour_" + i.ToString()) as Texture2D;
+            //add our temp texture that we just found to the armour List
+            armour.Add(temp);
+        }
+        for (int i = 0; i < clothesMax; i++)
+        {
+            //creating a temp Texture2D that it grabs using Resources.Load from the Character File looking for clothes_#
+            Texture2D temp = Resources.Load("Character/Clothes_" + i.ToString()) as Texture2D;
+            //add our temp texture that we just found to the clothes List
+            clothes.Add(temp);
+        }
     }
 
     // Update is called once per frame
