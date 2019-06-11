@@ -53,12 +53,7 @@ public class ButtonsScript : MonoBehaviour
     public int selectedIndex = 0;
 
     #endregion
-    private void Awake()
-    {
-        charName = GameObject.Find("EnteredName").GetComponent<Text>();
-        charName2 = charName.text;
-    }
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +61,12 @@ public class ButtonsScript : MonoBehaviour
         Cursor.visible = true;
         statArray = new string[] { "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Borborigan", "Bord", "Cloric", "Drooid", "Foightah", "Moonk", "Poloodoin", "Ronger", "Roogeg", "Soresore_ah", "woolak", "Bizard", };
+
+        //   charName = GameObject.Find("EnteredName").GetComponent<Text>();
+        //  charName2 = charName.text;
+
+       // charName2 = GameObject.Find("EnteredName").GetComponent<InputField>().text;
+        
 
         for (int i = 0; i < skinMax; i++)
         {
@@ -110,7 +111,12 @@ public class ButtonsScript : MonoBehaviour
             clothes.Add(temp);
         }
     }
-   
+
+    private void Update()
+    {
+        charName.text = charName2;
+    }
+
     void SetTexture(string type, int dir)
     {
         int index = 0, max = 0, matIndex = 0;
@@ -256,6 +262,29 @@ public class ButtonsScript : MonoBehaviour
     public void StatAssign()
     {
 
+        
+            SetTexture("skin", -1);
+        
+    }
+
+
+     void ResetChar()
+    {
+        SetTexture("skin", skinIndex = 0);
+        SetTexture("eyes", eyesIndex = 0);
+        SetTexture("mouth", mouthIndex = 0);
+        SetTexture("hair", hairIndex = 0);
+        SetTexture("armour", armourIndex = 0);
+        SetTexture("clothes", clothesIndex = 0);
+    }
+    void RandomizeChar()
+    {
+        SetTexture("skin", Random.Range(0, skinMax - 1));
+        SetTexture("eyes", Random.Range(0, eyesMax - 1));
+        SetTexture("mouth", Random.Range(0, mouthMax - 1));
+        SetTexture("hair", Random.Range(0, hairMax - 1));
+        SetTexture("armour", Random.Range(0, armourMax - 1));
+        SetTexture("clothes", Random.Range(0, clothesMax - 1));
     }
 
     void ChooseClass(int className)
