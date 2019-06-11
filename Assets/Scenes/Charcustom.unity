@@ -1424,7 +1424,7 @@ MonoBehaviour:
   eyesIndex: 0
   armourIndex: 0
   clothesIndex: 0
-  character: {fileID: 0}
+  character: {fileID: 1483896697}
   skinMax: 4
   hairMax: 5
   mouthMax: 3
@@ -8112,6 +8112,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428453218}
   m_CullTransparentMesh: 0
+--- !u!137 &1483896697 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 137910195861683858, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1702742385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491925898
 GameObject:
   m_ObjectHideFlags: 0
@@ -10770,6 +10776,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 200196987}
         m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200196987}
+        m_MethodName: StatAssign
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
