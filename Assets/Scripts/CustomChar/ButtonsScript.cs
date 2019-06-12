@@ -53,7 +53,7 @@ public class ButtonsScript : MonoBehaviour
     public int selectedIndex = 0;
 
     #endregion
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,8 +65,8 @@ public class ButtonsScript : MonoBehaviour
         //   charName = GameObject.Find("EnteredName").GetComponent<Text>();
         //  charName2 = charName.text;
 
-       // charName2 = GameObject.Find("EnteredName").GetComponent<InputField>().text;
-        
+        // charName2 = GameObject.Find("EnteredName").GetComponent<InputField>().text;
+
 
         for (int i = 0; i < skinMax; i++)
         {
@@ -259,16 +259,77 @@ public class ButtonsScript : MonoBehaviour
         Save();
         SceneManager.LoadScene(1);
     }
-    public void StatAssign()
+
+    //assign skins with buttons
+    #region ButtonSkins
+    public void StatAssignSkin(bool a)
     {
-
-        
+        if (a)
+        {
             SetTexture("skin", -1);
-        
+        }
+        else
+        {
+            SetTexture("skin", +1);
+        }
     }
+    public void StatAssignEyes(bool a)
+    {
+        if (a)
+        {
+            SetTexture("eyes", -1);
+        }
+        else
+        {
+            SetTexture("eyes", +1);
+        }
+    }
+    public void StatAssignMouth(bool a)
+    {
+        if (a)
+        {
+            SetTexture("mouth", -1);
 
-
-     void ResetChar()
+        }
+        else
+        {
+            SetTexture("mouth", +1);
+        }
+    }
+    public void StatAssignHair(bool a)
+    {
+        if (a)
+        {
+            SetTexture("hair", -1);
+        }
+        else
+        {
+            SetTexture("hair", +1);
+        }
+    }
+    public void StatAssignArmour(bool a)
+    {
+        if (a)
+        {
+            SetTexture("armour", -1);
+        }
+        else
+        {
+            SetTexture("armour", +1);
+        }
+    }
+    public void StatAssignClothes(bool a)
+    {
+        if (a)
+        {
+            SetTexture("clothes", - 1);
+        }
+        else
+        {
+            SetTexture("clothes", +1);
+        }
+    }
+   public void ResetChar()
     {
         SetTexture("skin", skinIndex = 0);
         SetTexture("eyes", eyesIndex = 0);
@@ -277,7 +338,7 @@ public class ButtonsScript : MonoBehaviour
         SetTexture("armour", armourIndex = 0);
         SetTexture("clothes", clothesIndex = 0);
     }
-    void RandomizeChar()
+  public  void RandomizeChar()
     {
         SetTexture("skin", Random.Range(0, skinMax - 1));
         SetTexture("eyes", Random.Range(0, eyesMax - 1));
@@ -286,7 +347,28 @@ public class ButtonsScript : MonoBehaviour
         SetTexture("armour", Random.Range(0, armourMax - 1));
         SetTexture("clothes", Random.Range(0, clothesMax - 1));
     }
+    #endregion
+    //assign stats with slider
+    #region SliderStats
+    //    public Slider StrengthSlider()
+    //{
 
+    //    stats[0]++;
+    //}
+    #endregion
+        //pick class with buttons
+        public void ButtonClass(bool a)
+    {
+        if (a)
+        {
+           selectedIndex --;
+        }
+        else
+        {
+            selectedIndex ++;
+        }
+    }
+    #region ButtonClass
     void ChooseClass(int className)
     {
         switch (className)
@@ -404,7 +486,9 @@ public class ButtonsScript : MonoBehaviour
                 break;
 
         }
+       
     }
+    #endregion
 }
 public enum CharacterClasss
 {
