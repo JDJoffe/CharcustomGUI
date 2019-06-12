@@ -380,6 +380,7 @@ public class ButtonsScript : MonoBehaviour
                 selectedIndex = selectedClass.Length - 1;
             }
             ChooseClass(selectedIndex);
+
         }
     
         else
