@@ -110,6 +110,19 @@ public class ButtonsScript : MonoBehaviour
             //add our temp texture that we just found to the clothes List
             clothes.Add(temp);
         }
+        character = GameObject.Find("Mesh").GetComponent<SkinnedMeshRenderer>();
+        SetTexture("skin", skinIndex = 0);
+        SetTexture("eyes", eyesIndex = 0);
+        SetTexture("mouth", mouthIndex = 0);
+        SetTexture("hair", hairIndex = 0);
+        SetTexture("armour", armourIndex = 0);
+        SetTexture("clothes", clothesIndex = 0);
+
+        //connect and find the SkinnedMeshRenderer thats in the scene to the variable we made for Renderer
+        #region do this after making the function SetTexture
+        //SetTexture skin, hair, mouth, eyes to the first texture 0
+        #endregion
+        ChooseClass(selectedIndex);
     }
 
     private void Update()
@@ -357,19 +370,30 @@ public class ButtonsScript : MonoBehaviour
     //}
     #endregion
         //pick class with buttons
-        public void ButtonClass(bool a)
+    public void ButtonClass(bool a)
     {
         if (a)
         {
-           selectedIndex --;
+            selectedIndex--;
+            if (selectedIndex < 0)
+            {
+                selectedIndex = selectedClass.Length - 1;
+            }
+            ChooseClass(selectedIndex);
         }
+    
         else
         {
-            selectedIndex ++;
+            selectedIndex++;
+            if (selectedIndex > selectedClass.Length - 1)
+            {
+                selectedIndex = 0;
+            }
+            ChooseClass(selectedIndex);
         }
     }
     #region ButtonClass
-    void ChooseClass(int className)
+   public void ChooseClass(int className)
     {
         switch (className)
         {
@@ -486,7 +510,8 @@ public class ButtonsScript : MonoBehaviour
                 break;
 
         }
-       
+      
+
     }
     #endregion
 }
