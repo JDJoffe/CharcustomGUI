@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class ButtonsScript : MonoBehaviour
 {
 
@@ -21,6 +22,9 @@ public class ButtonsScript : MonoBehaviour
 
 
 
+
+
+
     [Header("Texture List")]
     public List<Texture2D> skin = new List<Texture2D>();
     public List<Texture2D> hair = new List<Texture2D>();
@@ -31,27 +35,37 @@ public class ButtonsScript : MonoBehaviour
 
     [Header("Num")]
 
-    public int skinIndex, hairIndex, mouthIndex, eyesIndex, armourIndex, clothesIndex;
+    public int skinIndex;
+    public int hairIndex, mouthIndex, eyesIndex, armourIndex, clothesIndex;
 
     [Header("Renderer")]
     public Renderer character;
 
     [Header("Max Num")]
 
-    public int skinMax, hairMax, mouthMax, eyesMax, armourMax, clothesMax;
+    public int skinMax;
+    public int hairMax, mouthMax, eyesMax, armourMax, clothesMax;
     [Header("Character Name")]
-    public Text charName;
+    public InputField charName;
     public string charName2 = "";
+    public TextMeshProUGUI ClassName;
     [Header("Stats")]
+    public TextMeshProUGUI pointsTXTMesh;
     //class enum
     public CharacterClasss characterClass;
     public string[] statArray = new string[6];
     public int[] stats = new int[6];
     public int[] statsTemp = new int[6];
+    public int statsTempSlider;
     public int points = 10;
+    
     public string[] selectedClass = new string[12];
     public int selectedIndex = 0;
 
+
+    public Slider StrengthSliderx, DexteritySliderx, ConstitutionSliderx, WisdomSliderx, IntelligenceSliderx, CharismaSlderx ;
+    public TextMeshProUGUI StrengthNum, DexterityNum, ConstitutionNum, WisdomNum, IntelligenceNum, CharismaNum;
+    public int str, dex, con, wis, inte, cha;
     #endregion
 
     // Start is called before the first frame update
@@ -62,10 +76,7 @@ public class ButtonsScript : MonoBehaviour
         statArray = new string[] { "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Borborigan", "Bord", "Cloric", "Drooid", "Foightah", "Moonk", "Poloodoin", "Ronger", "Roogeg", "Soresore_ah", "woolak", "Bizard", };
 
-        //   charName = GameObject.Find("EnteredName").GetComponent<Text>();
-        //  charName2 = charName.text;
-
-        // charName2 = GameObject.Find("EnteredName").GetComponent<InputField>().text;
+       
 
 
         for (int i = 0; i < skinMax; i++)
@@ -127,7 +138,26 @@ public class ButtonsScript : MonoBehaviour
 
     private void Update()
     {
-        charName.text = charName2;
+        charName2 = charName.text;
+        ClassName.text = selectedClass[selectedIndex];
+       pointsTXTMesh.text= points.ToString();
+
+        str = stats[0] + statsTemp[0];
+        dex = stats[1] + statsTemp[1];
+        con = stats[2] + statsTemp[2];
+        wis = stats[3] + statsTemp[3];
+        inte = stats[4] + statsTemp[4];
+        cha = stats[5] + statsTemp[5];
+
+        StrengthNum.text = str.ToString() ;
+        DexterityNum.text = dex.ToString();
+        ConstitutionNum.text = con.ToString();
+        WisdomNum.text = wis.ToString();
+        IntelligenceNum.text = inte.ToString();
+        CharismaNum.text = cha.ToString();
+       
+
+
     }
 
     void SetTexture(string type, int dir)
@@ -363,6 +393,66 @@ public class ButtonsScript : MonoBehaviour
     #endregion
     //assign stats with slider
     #region SliderStats
+        public void StrengthSlider()
+    {
+        statsTempSlider = 0;
+        statsTemp[0] = (int)StrengthSliderx.value;       
+        Points();      
+    }
+    public void DexteritySlider()
+    {
+        statsTempSlider = 1;
+        statsTemp[1] = (int)DexteritySliderx.value;
+        Points();
+       
+    }
+    public void ConstitutionSlider()
+    {
+        statsTempSlider = 2;
+        statsTemp[2] = (int)ConstitutionSliderx.value;
+        Points();
+       
+    }
+    public void WisdomSlider()
+    {
+        statsTempSlider = 3;
+        statsTemp[3] = (int)WisdomSliderx.value;
+        Points();
+        
+    }
+    public void IntelligenceSlider()
+    {
+        statsTempSlider = 4;
+        statsTemp[4] = (int)IntelligenceSliderx.value;
+        Points();
+       
+    }
+    public void CharismaSlider()
+    {
+        statsTempSlider = 5;
+        statsTemp[5] = (int)CharismaSlderx.value;
+       
+        
+        Points();
+    }
+    public void Points()
+    {
+       
+       
+            if (points > 0)
+            {
+            points--;
+            statsTemp[statsTempSlider]++;
+            Debug.Log("i did the points over 0");
+            }
+            if (points < 10 && statsTemp[statsTempSlider] > 0)
+            {
+            points++;
+            statsTemp[statsTempSlider]--;
+            Debug.Log("i did the points under 10 && statstemp over 0");
+            }
+        
+    }
     //    public Slider StrengthSlider()
     //{
 

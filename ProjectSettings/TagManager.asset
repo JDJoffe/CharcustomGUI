@@ -7,18 +7,6 @@ TagManager:
   - NPC
   - Item
   - CheckPoint
-  - Skin-
-  - Skin+
-  - Eyes-
-  - Eyes+
-  - Mouth-
-  - Mouth+
-  - Hair-
-  - Hair+
-  - Armour-
-  - Armour+
-  - Clothes-
-  - Clothes+
   layers:
   - Default
   - TransparentFX
