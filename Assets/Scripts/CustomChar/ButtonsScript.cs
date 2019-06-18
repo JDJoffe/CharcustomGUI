@@ -393,11 +393,16 @@ public class ButtonsScript : MonoBehaviour
     #endregion
     //assign stats with slider
     #region SliderStats
-        public void StrengthSlider()
+        public void StrengthSlider(int PointsTemp)
     {
-        statsTempSlider = 0;
-        statsTemp[0] = (int)StrengthSliderx.value;       
-        Points();      
+       
+        
+            statsTempSlider = 0;
+            statsTemp[0] = (int)StrengthSliderx.value;
+            Points();
+        
+        
+         
     }
     public void DexteritySlider()
     {
@@ -433,9 +438,9 @@ public class ButtonsScript : MonoBehaviour
         statsTemp[5] = (int)CharismaSlderx.value;
        
         
-        Points();
+        Points(pointsTemp);
     }
-    public void Points()
+    public void Points(int pointsTemp)
     {
        
        
