@@ -438,11 +438,11 @@ public class ButtonsScript : MonoBehaviour
         statsTemp[5] = (int)CharismaSlderx.value;
        
         
-        Points(pointsTemp);
+        Points();
     }
-    public void Points(int pointsTemp)
+    public void Points()
     {
-       
+        int pointsTemp;
        
             if (points > 0)
             {
