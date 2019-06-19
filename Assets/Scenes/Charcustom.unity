@@ -1419,6 +1419,8 @@ MonoBehaviour:
   statsTemp: 000000000000000000000000000000000000000000000000
   statsTempSlider: 0
   points: 10
+  pointsTemp: 10
+  isIncreasing: 0
   selectedClass:
   - 
   - 
@@ -10175,7 +10177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2032359129
 MonoBehaviour:
   m_ObjectHideFlags: 0

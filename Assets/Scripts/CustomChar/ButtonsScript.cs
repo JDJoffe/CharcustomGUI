@@ -57,13 +57,14 @@ public class ButtonsScript : MonoBehaviour
     public int[] stats = new int[6];
     public int[] statsTemp = new int[6];
     public int statsTempSlider;
-    public int points = 10;
-    
+    public int points = 10 ;
+    public int pointsTemp = 10;
+    public bool isIncreasing = false;
     public string[] selectedClass = new string[12];
     public int selectedIndex = 0;
 
 
-    public Slider StrengthSliderx, DexteritySliderx, ConstitutionSliderx, WisdomSliderx, IntelligenceSliderx, CharismaSlderx ;
+    public Slider StrengthSliderx, DexteritySliderx, ConstitutionSliderx, WisdomSliderx, IntelligenceSliderx, CharismaSlderx;
     public TextMeshProUGUI StrengthNum, DexterityNum, ConstitutionNum, WisdomNum, IntelligenceNum, CharismaNum;
     public int str, dex, con, wis, inte, cha;
     #endregion
@@ -76,7 +77,7 @@ public class ButtonsScript : MonoBehaviour
         statArray = new string[] { "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Borborigan", "Bord", "Cloric", "Drooid", "Foightah", "Moonk", "Poloodoin", "Ronger", "Roogeg", "Soresore_ah", "woolak", "Bizard", };
 
-       
+        
 
 
         for (int i = 0; i < skinMax; i++)
@@ -140,7 +141,9 @@ public class ButtonsScript : MonoBehaviour
     {
         charName2 = charName.text;
         ClassName.text = selectedClass[selectedIndex];
-       pointsTXTMesh.text= points.ToString();
+        pointsTXTMesh.text = points.ToString();
+
+       
 
         str = stats[0] + statsTemp[0];
         dex = stats[1] + statsTemp[1];
@@ -149,13 +152,14 @@ public class ButtonsScript : MonoBehaviour
         inte = stats[4] + statsTemp[4];
         cha = stats[5] + statsTemp[5];
 
-        StrengthNum.text = str.ToString() ;
+
+        StrengthNum.text = str.ToString();
         DexterityNum.text = dex.ToString();
         ConstitutionNum.text = con.ToString();
         WisdomNum.text = wis.ToString();
         IntelligenceNum.text = inte.ToString();
         CharismaNum.text = cha.ToString();
-       
+
 
 
     }
@@ -365,14 +369,14 @@ public class ButtonsScript : MonoBehaviour
     {
         if (a)
         {
-            SetTexture("clothes", - 1);
+            SetTexture("clothes", -1);
         }
         else
         {
             SetTexture("clothes", +1);
         }
     }
-   public void ResetChar()
+    public void ResetChar()
     {
         SetTexture("skin", skinIndex = 0);
         SetTexture("eyes", eyesIndex = 0);
@@ -381,7 +385,7 @@ public class ButtonsScript : MonoBehaviour
         SetTexture("armour", armourIndex = 0);
         SetTexture("clothes", clothesIndex = 0);
     }
-  public  void RandomizeChar()
+    public void RandomizeChar()
     {
         SetTexture("skin", Random.Range(0, skinMax - 1));
         SetTexture("eyes", Random.Range(0, eyesMax - 1));
@@ -393,78 +397,85 @@ public class ButtonsScript : MonoBehaviour
     #endregion
     //assign stats with slider
     #region SliderStats
-        public void StrengthSlider(int PointsTemp)
+    public void StrengthSlider()
     {
-       
-        
-            statsTempSlider = 0;
-            statsTemp[0] = (int)StrengthSliderx.value;
-            Points();
-        
-        
-         
+        statsTempSlider = 0;
+        statsTemp[0] = (int)StrengthSliderx.value;      
+        pointsTemp = str- stats[0];
+        Points();
     }
     public void DexteritySlider()
     {
         statsTempSlider = 1;
-        statsTemp[1] = (int)DexteritySliderx.value;
+        statsTemp[1] = (int)DexteritySliderx.value;      
+        pointsTemp = dex - stats[1];
         Points();
-       
     }
     public void ConstitutionSlider()
     {
         statsTempSlider = 2;
-        statsTemp[2] = (int)ConstitutionSliderx.value;
+        statsTemp[2] = (int)ConstitutionSliderx.value;       
+        pointsTemp = con - stats[2];
         Points();
-       
     }
     public void WisdomSlider()
     {
         statsTempSlider = 3;
-        statsTemp[3] = (int)WisdomSliderx.value;
+        statsTemp[3] = (int)WisdomSliderx.value;       
+        pointsTemp = wis - stats[3];
         Points();
-        
     }
     public void IntelligenceSlider()
     {
         statsTempSlider = 4;
         statsTemp[4] = (int)IntelligenceSliderx.value;
+       pointsTemp = inte - stats[4];
         Points();
-       
     }
     public void CharismaSlider()
     {
+
         statsTempSlider = 5;
         statsTemp[5] = (int)CharismaSlderx.value;
-       
-        
+        pointsTemp = cha - stats[5];
         Points();
+      
     }
     public void Points()
     {
-        int pointsTemp;
+
        
-            if (points > 0)
+
+
+        if (statsTemp[statsTempSlider] > pointsTemp)
+        {
+            isIncreasing = true;
+            if (isIncreasing == true)
             {
-            points--;
-            statsTemp[statsTempSlider]++;
-            Debug.Log("i did the points over 0");
+                points--;
+                
+                Debug.Log("i did the points over 0");
             }
-            if (points < 10 && statsTemp[statsTempSlider] > 0)
+
+        }
+        if (statsTemp[statsTempSlider] < pointsTemp)
+        {
+            isIncreasing = false;
+            if (isIncreasing == false && statsTemp[statsTempSlider] > 0)
             {
-            points++;
-            statsTemp[statsTempSlider]--;
-            Debug.Log("i did the points under 10 && statstemp over 0");
+                points++;
+                
+                Debug.Log("i did the points under 10 && statstemp over 0");
             }
+        }
+
+
         
     }
-    //    public Slider StrengthSlider()
-    //{
-
-    //    stats[0]++;
+   
     //}
     #endregion
-        //pick class with buttons
+    //pick class with buttons
     public void ButtonClass(bool a)
     {
         if (a)
@@ -477,7 +488,7 @@ public class ButtonsScript : MonoBehaviour
             ChooseClass(selectedIndex);
 
         }
-    
+
         else
         {
             selectedIndex++;
@@ -489,7 +500,7 @@ public class ButtonsScript : MonoBehaviour
         }
     }
     #region ButtonClass
-   public void ChooseClass(int className)
+    public void ChooseClass(int className)
     {
         switch (className)
         {
@@ -606,7 +617,7 @@ public class ButtonsScript : MonoBehaviour
                 break;
 
         }
-      
+
 
     }
     #endregion
