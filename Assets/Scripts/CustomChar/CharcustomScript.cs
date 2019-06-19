@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-public class ButtonsScript : MonoBehaviour
+public class CharcustomScript : MonoBehaviour
 {
 
     #region Sounds
@@ -56,15 +56,13 @@ public class ButtonsScript : MonoBehaviour
     public string[] statArray = new string[6];
     public int[] stats = new int[6];
     public int[] statsTemp = new int[6];
-    public int statsTempSlider;
-    public int points = 10 ;
-    public int pointsTemp = 10;
-    public bool isIncreasing = false;
+    public int statsButton;
+    public int points = 10;
     public string[] selectedClass = new string[12];
     public int selectedIndex = 0;
 
 
-    public Slider StrengthSliderx, DexteritySliderx, ConstitutionSliderx, WisdomSliderx, IntelligenceSliderx, CharismaSlderx;
+
     public TextMeshProUGUI StrengthNum, DexterityNum, ConstitutionNum, WisdomNum, IntelligenceNum, CharismaNum;
     public int str, dex, con, wis, inte, cha;
     #endregion
@@ -77,7 +75,7 @@ public class ButtonsScript : MonoBehaviour
         statArray = new string[] { "Strength", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Charisma" };
         selectedClass = new string[] { "Borborigan", "Bord", "Cloric", "Drooid", "Foightah", "Moonk", "Poloodoin", "Ronger", "Roogeg", "Soresore_ah", "woolak", "Bizard", };
 
-        
+
 
 
         for (int i = 0; i < skinMax; i++)
@@ -143,7 +141,7 @@ public class ButtonsScript : MonoBehaviour
         ClassName.text = selectedClass[selectedIndex];
         pointsTXTMesh.text = points.ToString();
 
-       
+
 
         str = stats[0] + statsTemp[0];
         dex = stats[1] + statsTemp[1];
@@ -397,83 +395,62 @@ public class ButtonsScript : MonoBehaviour
     #endregion
     //assign stats with slider
     #region SliderStats
-    public void StrengthSlider()
+    public void StrengthButton(bool a)
     {
-        statsTempSlider = 0;
-        statsTemp[0] = (int)StrengthSliderx.value;      
-        pointsTemp = str- stats[0];
-        Points();
+        statsButton = 0;
+        Points(a);
     }
-    public void DexteritySlider()
+    public void DexterityButton(bool a)
     {
-        statsTempSlider = 1;
-        statsTemp[1] = (int)DexteritySliderx.value;      
-        pointsTemp = dex - stats[1];
-        Points();
+        statsButton = 1;
+        Points(a);
     }
-    public void ConstitutionSlider()
+    public void ConstitutionButton(bool a)
     {
-        statsTempSlider = 2;
-        statsTemp[2] = (int)ConstitutionSliderx.value;       
-        pointsTemp = con - stats[2];
-        Points();
+        statsButton = 2;
+        Points(a);
     }
-    public void WisdomSlider()
+    public void WisdomButton(bool a)
     {
-        statsTempSlider = 3;
-        statsTemp[3] = (int)WisdomSliderx.value;       
-        pointsTemp = wis - stats[3];
-        Points();
+        statsButton = 3;
+        Points(a);
     }
-    public void IntelligenceSlider()
+    public void IntelligenceButton(bool a)
     {
-        statsTempSlider = 4;
-        statsTemp[4] = (int)IntelligenceSliderx.value;
-       pointsTemp = inte - stats[4];
-        Points();
+        statsButton = 4;
+        Points(a);
     }
-    public void CharismaSlider()
+    public void CharismaButton(bool a)
     {
-
-        statsTempSlider = 5;
-        statsTemp[5] = (int)CharismaSlderx.value;
-        pointsTemp = cha - stats[5];
-        Points();
-      
+        statsButton = 5;
+        Points(a);
     }
-    public void Points()
+    public void Points(bool a)
     {
-
-       
-
-
-        if (statsTemp[statsTempSlider] > pointsTemp)
+        if (points > 0)
         {
-            isIncreasing = true;
-            if (isIncreasing == true)
+            if (a == true)
             {
                 points--;
-                
-                Debug.Log("i did the points over 0");
+                statsTemp[statsButton]++;
+                Debug.Log("increase points");
             }
-
         }
-        if (statsTemp[statsTempSlider] < pointsTemp)
+        if (points < 10 )
         {
-            isIncreasing = false;
-            if (isIncreasing == false && statsTemp[statsTempSlider] > 0)
+            if (a == false && statsTemp[statsButton] > 0)
             {
                 points++;
-                
-                Debug.Log("i did the points under 10 && statstemp over 0");
-            }
+                statsTemp[statsButton]--;
+
+                Debug.Log("reduce points");
+                if (statsTemp[statsButton] < stats[statsButton])
+                {
+
+                }
+            }  
         }
-
-
-        
     }
-   
-    //}
     #endregion
     //pick class with buttons
     public void ButtonClass(bool a)
