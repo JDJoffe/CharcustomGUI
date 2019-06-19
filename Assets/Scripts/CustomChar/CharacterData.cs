@@ -2,23 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class CharacterData : CustomisationSet
+public class CharacterData : CharcustomScript
 {
-   
 
- 
 
-    public int[] currentCharRace;
+    public int curskinIndex , cureyesIndex, curmouthIndex , curhairIndex, curarmourIndex, curClothesIndex;
+    public string currentCharName;
+    public string[] currentCharRace;
     public int[] currentCharData;
-    public CharacterData(CustomisationGet customisationget)
+    public int[] currentCharStats;
+    public CharacterData(CharcustomScript charcustom)
     {
-        currentCharData[0] = skinIndex;
-        currentCharData[1] = eyesIndex;
-        currentCharData[2] = mouthIndex;
-        currentCharData[3] = hairIndex;
-        currentCharData[4] = armourIndex;
-        currentCharData[5] = clothesIndex;
+        curskinIndex = skinIndex;
+        cureyesIndex = eyesIndex;
+        curmouthIndex = mouthIndex;
+       curhairIndex = hairIndex;
+        curarmourIndex = armourIndex;
+        curClothesIndex = clothesIndex;
 
-        
+        currentCharRace = selectedClass;
+
+        currentCharStats[0] = str;
+        currentCharStats[1] = dex;
+        currentCharStats[2] = con;
+        currentCharStats[3] = wis;
+        currentCharStats[4] = inte;
+        currentCharStats[5] = cha;
+
+        currentCharName = charName2;
+
     }
 }

@@ -6,13 +6,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class CharacterSave 
 {
     //save
-   public static void SaveCharacter(CustomisationGet customisationGet)
+   public static void SaveCharacter(CharcustomScript charcustom)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/customisationget.fun";
+        string path = Application.persistentDataPath + "/customisationchar.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        CharacterData data = new CharacterData(customisationGet);
+        CharacterData data = new CharacterData(charcustom);
         formatter.Serialize(stream, data);
         stream.Close();
     }
