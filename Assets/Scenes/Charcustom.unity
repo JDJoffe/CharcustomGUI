@@ -8706,6 +8706,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137910195861683858, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.233
@@ -10171,6 +10176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032359130}
   - component: {fileID: 2032359129}
+  - component: {fileID: 2032359131}
   m_Layer: 0
   m_Name: custom
   m_TagString: Untagged
@@ -10249,6 +10255,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032359131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032359128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2061cb898468f6049a0c526062167071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1483896697}
 --- !u!1 &2110872469
 GameObject:
   m_ObjectHideFlags: 0
