@@ -2,34 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class CharacterData : CharcustomScript
+public class CharacterData 
 {
+    //ui
+    public float mana;
+    public float maxMana;
 
-
+    public float health;
+    public float maxHealth;
+    public float stamina;
+    public float maxStamina;
+    //movement
+    public float[] position;
+    //charcustom
     public int curskinIndex , cureyesIndex, curmouthIndex , curhairIndex, curarmourIndex, curClothesIndex;
     public string currentCharName;
     public string[] currentCharRace;
-    public int[] currentCharData;
-    public int[] currentCharStats;
-    public CharacterData(CharcustomScript charcustom)
+
+    public int curStrength, curDexterity, curConstitution, curWisdom, curIntelligence, curCharisma;
+    public CharacterData(CharcustomScript charcustom )
     {
-        curskinIndex = skinIndex;
-        cureyesIndex = eyesIndex;
-        curmouthIndex = mouthIndex;
-       curhairIndex = hairIndex;
-        curarmourIndex = armourIndex;
-        curClothesIndex = clothesIndex;
+        //charCustom
+        curskinIndex = charcustom.skinIndex;
+        cureyesIndex = charcustom.eyesIndex;
+        curmouthIndex = charcustom.mouthIndex;
+       curhairIndex = charcustom.hairIndex;
+        curarmourIndex = charcustom.armourIndex;
+        curClothesIndex = charcustom.clothesIndex;
 
-        currentCharRace = selectedClass;
+        currentCharRace = charcustom.selectedClass;
 
-        currentCharStats[0] = str;
-        currentCharStats[1] = dex;
-        currentCharStats[2] = con;
-        currentCharStats[3] = wis;
-        currentCharStats[4] = inte;
-        currentCharStats[5] = cha;
+        
+        curStrength = charcustom.str;
+        curDexterity = charcustom.dex;
+        curConstitution = charcustom.con;
+        curWisdom = charcustom.wis;
+        curIntelligence = charcustom.inte;
+        curCharisma = charcustom.cha;
 
-        currentCharName = charName2;
+        currentCharName = charcustom.charName2;
 
+       
+
+        
+    }
+   
+    public CharacterData(UIBars uiBars)
+    {
+        //uiBars
+        mana = uiBars.curMana;
+        maxMana = uiBars.maxMana;
+
+        health = uiBars.curHealth;
+        maxHealth = uiBars.maxHealth;
+
+        stamina = uiBars.curStamina;
+        maxStamina = uiBars.maxStamina;
     }
 }

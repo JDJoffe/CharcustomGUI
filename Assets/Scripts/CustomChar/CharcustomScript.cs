@@ -297,11 +297,16 @@ public class CharcustomScript : MonoBehaviour
     }
     public void Save()
     {
-
+        CharacterSave.SaveCharacter(this);
+        
     }
+    //public void Savebars()
+    //{
+    //    CharacterSave.SaveBars();
+    //}
     public void Play()
     {
-        Save();
+       
         SceneManager.LoadScene(1);
     }
 

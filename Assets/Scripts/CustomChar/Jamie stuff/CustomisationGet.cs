@@ -5,35 +5,115 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CustomisationGet : MonoBehaviour
 {
+    public string type;
+    public int index;
+    //ui
+    [Header("Bars")]
+    public float mana;
+    public float maxMana;
+    public float health;
+    public float maxHealth;
+    public float stamina;
+    public float maxStamina;
+
+    //charcustom
+    [Header("Appearance Indexes")]
+    public int curskinIndex;
+    public int cureyesIndex, curmouthIndex, curhairIndex, curarmourIndex, curClothesIndex;
+    public string currentCharName;
+    public string[] currentCharRace;
+    [Header("Stats")]
+    public int curStrength;
+    public int curDexterity, curConstitution, curWisdom, curIntelligence, curCharisma;
 
     [Header("Character")]
     //public variable for the Skinned Mesh Renderer which is our character reference
     public Renderer character;
-
+    public GameObject player;
     #region Start
+
     private void Start()
     {
         //our character reference connected to the Skinned Mesh Renderer via finding the Mesh
         character = GameObject.FindGameObjectWithTag("PlayerMesh").GetComponent<SkinnedMeshRenderer>();
+        LoadTexture();
+
+        SetTexture();
         //Run the function LoadTexture	
+
     }
     #endregion
 
     #region LoadTexture Function
-    void LoadTexture()
+    public void LoadTexture()
     {
         //check to see if our save file for this character
 
+        CharacterData data = CharacterSave.LoadCharacter();
+
+        curskinIndex = data.curskinIndex;
+        cureyesIndex = data.cureyesIndex;
+        curmouthIndex = data.curmouthIndex;
+        curhairIndex = data.curhairIndex;
+        curarmourIndex = data.curarmourIndex;
+        curClothesIndex = data.curClothesIndex;
+
+        currentCharRace = data.currentCharRace;
+
+
+        curStrength = data.curStrength;
+        curDexterity = data.curDexterity;
+        curConstitution = data.curConstitution;
+        curWisdom = data.curWisdom;
+        curIntelligence = data.curIntelligence;
+        curCharisma = data.curCharisma;
+
+        currentCharName = data.currentCharName;
+
+
+
+        //uiBars
+        mana = data.mana;
+        maxMana = data.maxMana;
+
+        health = data.health;
+        maxHealth = data.maxHealth;
+
+        stamina = data.stamina;
+        maxStamina = data.maxStamina;
         //if it doesnt then load the CustomSet level
+
         //if it does have a save file then load and SetTexture Skin, Hair, Mouth and Eyes from PlayerPrefs
+
         //grab the gameObject in scene that is our character and set its Object name to the Characters name
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.gameObject.name = currentCharName;
+
+
+
+
+
     }
     #endregion
+    public void Positive()
+    {
+
+    }
+    public void Negative()
+    {
+
+    }
     #region SetTexture
     //Create a function that is called SetTexture it should contain a string and int
     //the string is the name of the material we are editing, the int is the direction we are changing
-    void SetTexture(string type, int index)
+
+    //i have no idea how to call this i get errors
+    public void SetTexture()
     {
+
+        Debug.Log("hellp");
+
 
 
         //we need variables that exist only within this function
@@ -84,6 +164,9 @@ public class CustomisationGet : MonoBehaviour
         mats[matIndex].mainTexture = tex;
         //our characters materials are equal to the material array
         character.materials = mats;
+
+
     }
     #endregion
+
 }
