@@ -21,7 +21,7 @@ public class CustomisationGet : MonoBehaviour
     public int curskinIndex;
     public int cureyesIndex, curmouthIndex, curhairIndex, curarmourIndex, curClothesIndex;
     public string currentCharName;
-    public string[] currentCharRace;
+    public int charClass;
     [Header("Stats")]
     public int curStrength;
     public int curDexterity, curConstitution, curWisdom, curIntelligence, curCharisma;
@@ -58,7 +58,7 @@ public class CustomisationGet : MonoBehaviour
         curarmourIndex = data.curarmourIndex;
         curClothesIndex = data.curClothesIndex;
 
-        currentCharRace = data.currentCharRace;
+        charClass = data.classIndex;
 
 
         curStrength = data.curStrength;

@@ -17,8 +17,9 @@ public class CharacterData
     //charcustom
     public int curskinIndex , cureyesIndex, curmouthIndex , curhairIndex, curarmourIndex, curClothesIndex;
     public string currentCharName;
-    public string[] currentCharRace;
-
+    
+    public int classIndex;
+    
     public int curStrength, curDexterity, curConstitution, curWisdom, curIntelligence, curCharisma;
     public CharacterData(CharcustomScript charcustom )
     {
@@ -30,7 +31,7 @@ public class CharacterData
         curarmourIndex = charcustom.armourIndex;
         curClothesIndex = charcustom.clothesIndex;
 
-        currentCharRace = charcustom.selectedClass;
+       classIndex = charcustom.selectedIndex;
 
         
         curStrength = charcustom.str;

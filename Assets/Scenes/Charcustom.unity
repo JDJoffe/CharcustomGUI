@@ -6102,6 +6102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061cb898468f6049a0c526062167071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
+  index: 0
   mana: 0
   maxMana: 0
   health: 0
@@ -6115,7 +6117,7 @@ MonoBehaviour:
   curarmourIndex: 0
   curClothesIndex: 0
   currentCharName: 
-  currentCharRace: []
+  charClass: 0
   curStrength: 0
   curDexterity: 0
   curConstitution: 0
@@ -6123,6 +6125,7 @@ MonoBehaviour:
   curIntelligence: 0
   curCharisma: 0
   character: {fileID: 1483896697}
+  player: {fileID: 0}
 --- !u!4 &898778964
 Transform:
   m_ObjectHideFlags: 0
@@ -9940,6 +9943,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1487054404768522, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.233
@@ -11381,6 +11388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061cb898468f6049a0c526062167071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 
+  index: 0
   mana: 0
   maxMana: 0
   health: 0
@@ -11394,7 +11403,7 @@ MonoBehaviour:
   curarmourIndex: 0
   curClothesIndex: 0
   currentCharName: 
-  currentCharRace: []
+  charClass: 0
   curStrength: 0
   curDexterity: 0
   curConstitution: 0
@@ -11402,6 +11411,7 @@ MonoBehaviour:
   curIntelligence: 0
   curCharisma: 0
   character: {fileID: 1483896697}
+  player: {fileID: 0}
 --- !u!1 &2140884436
 GameObject:
   m_ObjectHideFlags: 0

@@ -438,7 +438,7 @@ public class CharcustomScript : MonoBehaviour
             {
                 points--;
                 statsTemp[statsButton]++;
-                Debug.Log("increase points");
+                //Debug.Log("increase points");
             }
         }
         if (points < 10 )
@@ -448,7 +448,7 @@ public class CharcustomScript : MonoBehaviour
                 points++;
                 statsTemp[statsButton]--;
 
-                Debug.Log("reduce points");
+               // Debug.Log("reduce points");
                 if (statsTemp[statsButton] < stats[statsButton])
                 {
 
