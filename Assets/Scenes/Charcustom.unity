@@ -6073,73 +6073,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892616021}
   m_CullTransparentMesh: 0
---- !u!1 &898778962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 898778964}
-  - component: {fileID: 898778963}
-  m_Layer: 0
-  m_Name: CustomGet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &898778963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898778962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2061cb898468f6049a0c526062167071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 
-  index: 0
-  mana: 0
-  maxMana: 0
-  health: 0
-  maxHealth: 0
-  stamina: 0
-  maxStamina: 0
-  curskinIndex: 0
-  cureyesIndex: 0
-  curmouthIndex: 0
-  curhairIndex: 0
-  curarmourIndex: 0
-  curClothesIndex: 0
-  currentCharName: 
-  charClass: 0
-  curStrength: 0
-  curDexterity: 0
-  curConstitution: 0
-  curWisdom: 0
-  curIntelligence: 0
-  curCharisma: 0
-  character: {fileID: 1483896697}
-  player: {fileID: 0}
---- !u!4 &898778964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898778962}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 349.49997, y: 69.80626, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905437929
 GameObject:
   m_ObjectHideFlags: 0
@@ -9947,6 +9880,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 137910195861683858, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4281741962858792, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.233
@@ -9982,11 +9920,6 @@ PrefabInstance:
     - target: {fileID: 1747901585013460, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
       propertyPath: m_TagString
       value: PlayerMesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 137910195861683858, guid: c0e9de029044bc34b8a0fe1b450e4cfe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0e9de029044bc34b8a0fe1b450e4cfe, type: 3}
@@ -11388,8 +11321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2061cb898468f6049a0c526062167071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 
-  index: 0
   mana: 0
   maxMana: 0
   health: 0

@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CustomisationGet : MonoBehaviour
 {
-    public string type;
-    public int index;
+   
     //ui
     [Header("Bars")]
     public float mana;
@@ -38,7 +37,7 @@ public class CustomisationGet : MonoBehaviour
         character = GameObject.FindGameObjectWithTag("PlayerMesh").GetComponent<SkinnedMeshRenderer>();
         LoadTexture();
 
-        SetTexture();
+       
         //Run the function LoadTexture	
 
     }
@@ -90,26 +89,23 @@ public class CustomisationGet : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         player.gameObject.name = currentCharName;
 
-
-
+        SetTexture("skin", curskinIndex);       
+        SetTexture("eyes", cureyesIndex);
+        SetTexture("mouth",curmouthIndex);
+        SetTexture("hair", curhairIndex);
+        SetTexture("armour", curarmourIndex);
+        SetTexture("clothes", curClothesIndex);
 
 
     }
     #endregion
-    public void Positive()
-    {
-
-    }
-    public void Negative()
-    {
-
-    }
+   
     #region SetTexture
     //Create a function that is called SetTexture it should contain a string and int
     //the string is the name of the material we are editing, the int is the direction we are changing
 
     //i have no idea how to call this i get errors
-    public void SetTexture()
+    public void SetTexture(string type, int index)
     {
 
         Debug.Log("hellp");
@@ -126,7 +122,7 @@ public class CustomisationGet : MonoBehaviour
             //case skin      
             case "skin":
                 //textures is our Resource.Load Character Skin save index we loaded in set as our Texture2D
-                tex = Resources.Load("Character/Skin_" + curskinIndex.ToString()) as Texture2D;
+                tex = Resources.Load("Character/Skin_" + index) as Texture2D;
                 //material index element number is 1
                 matIndex = 1;
                 //break
@@ -134,27 +130,27 @@ public class CustomisationGet : MonoBehaviour
             //now repeat for each material 
             //eyes is 2
             case "eyes":
-                tex = Resources.Load("Character/Eyes_" + cureyesIndex.ToString()) as Texture2D;
+                tex = Resources.Load("Character/Eyes_" + index) as Texture2D;
                 matIndex = 2;
                 break;
             //mouth is 3
             case "mouth":
-                tex = Resources.Load("Character/Mouth_" + curmouthIndex.ToString()) as Texture2D;
+                tex = Resources.Load("Character/Mouth_" + index) as Texture2D;
                 matIndex = 3;
                 break;
             //hair is 4
             case "hair":
-                tex = Resources.Load("Character/Hair_" + curhairIndex.ToString()) as Texture2D;
+                tex = Resources.Load("Character/Hair_" + index) as Texture2D;
                 matIndex = 4;
                 break;
             //armour is 5
             case "armour":
-                tex = Resources.Load("Character/Armour_" + curarmourIndex.ToString()) as Texture2D;
+                tex = Resources.Load("Character/Armour_" + index) as Texture2D;
                 matIndex = 5;
                 break;
             //clothes is 6
             case "clothes":
-                tex = Resources.Load("Character/Clothes_" + curClothesIndex.ToString()) as Texture2D;
+                tex = Resources.Load("Character/Clothes_" + index) as Texture2D;
                 matIndex = 6;
                 break;
         }
