@@ -22,7 +22,7 @@ public class CharcustomScript : MonoBehaviour
 
 
 
-
+    public UIBars uiBars;
 
 
     [Header("Texture List")]
@@ -157,6 +157,7 @@ public class CharcustomScript : MonoBehaviour
         WisdomNum.text = wis.ToString();
         IntelligenceNum.text = inte.ToString();
         CharismaNum.text = cha.ToString();
+
 
 
 
@@ -298,6 +299,7 @@ public class CharcustomScript : MonoBehaviour
     public void Save()
     {
         CharacterSave.SaveCharacter(this);
+        CharacterSave.SaveBars(uiBars);
         
     }
     //public void Savebars()
